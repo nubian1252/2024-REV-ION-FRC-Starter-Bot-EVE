@@ -109,6 +109,9 @@ public class MecanumDrive extends RobotDriveBase implements Sendable, AutoClosea
     }
   }
 
+
+  /** Creates a new DriveSubsystem. */
+  
   /**
    * Construct a MecanumDrive.
    *
@@ -136,6 +139,7 @@ public class MecanumDrive extends RobotDriveBase implements Sendable, AutoClosea
     SendableRegistry.addChild(this, rearRightMotor);
   }
 
+
   /**
    * Construct a MecanumDrive.
    *
@@ -157,6 +161,7 @@ public class MecanumDrive extends RobotDriveBase implements Sendable, AutoClosea
     requireNonNullParam(frontRightMotor, "frontRightMotor", "MecanumDrive");
     requireNonNullParam(rearRightMotor, "rearRightMotor", "MecanumDrive");
 
+    
     m_frontLeftMotor = frontLeftMotor;
     m_rearLeftMotor = rearLeftMotor;
     m_frontRightMotor = frontRightMotor;
@@ -164,6 +169,7 @@ public class MecanumDrive extends RobotDriveBase implements Sendable, AutoClosea
     instances++;
     SendableRegistry.addLW(this, "MecanumDrive", instances);
   }
+  
 
   @Override
   public void close() {
